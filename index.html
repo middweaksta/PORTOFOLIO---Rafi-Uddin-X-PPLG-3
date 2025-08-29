@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio | Rafi'Uddin</title>
+  <style>
+    /* ===== Reset & Base ===== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #f9fafc, #eef2f7);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    /* ===== Header / Navbar ===== */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 7%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      z-index: 1000;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: #e0e0e0;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+    nav a {
+      font-weight: 500;
+      color: #2a2a72;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #6c63ff; }
+
+    /* ===== Hero ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(120deg, #e0e7ff 0%, #f9fafc 100%);
+      background-image: url('https://www.upload.ee/image/18532396/7c531c8b52c2286617d5fc02a1e3e50e.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .hero img {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      color: #22223b;
+    }
+    .hero h2 {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #e0e0e0;
+      margin: 0.5rem 0 1rem;
+    }
+    .hero p {
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+      color: #e0e0e0;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      background: linear-gradient(135deg, #22223b, #4a4e69);
+      color: #fff;
+      font-weight: 600;
+      transition: transform 0.3s, background 0.3s;
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      background: linear-gradient(135deg, #4a4e69, #6c63ff);
+    }
+
+    /* ===== Section Base ===== */
+    section { padding: 5rem 10%; }
+    section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #22223b;
+    }
+
+    /* ===== Tentang ===== */
+    .about p {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
+      color: #4a4e69;
+    }
+    .skills {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+    .skill {
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      background: #f2e9e4;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #22223b;
+      border: 1px solid #ddd;
+    }
+
+    /* ===== Projek ===== */
+    .projek p {
+      text-align: center;
+      color: #4a4e69;
+      font-size: 1rem;
+    }
+    .projek-images {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .projek-images img {
+      max-width: 340px;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+
+    /* ===== Kontak ===== */
+    .contact { text-align: center; }
+    .contact p { margin: 0.5rem 0; font-size: 1.1rem; }
+    .socials {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    .socials a {
+      font-size: 1.5rem;
+      color: #4a4e69;
+      transition: color 0.3s;
+    }
+    .socials a:hover { color: #6c63ff; }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #22223b;
+      color: #f2e9e4;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    /* ===== Responsive ===== */
+    @media(max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .hero img { width: 200px; height: 200px; }
+      section { padding: 3rem 5%; }
+    }
+  </style>
+  <!-- Icon (Font Awesome CDN) -->
+  <script src="https://kit.fontawesome.com/3d2d3f8a0d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    
+    <nav>
+      <ul>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#projek">Projek</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <img src="https://www.upload.ee/image/18532123/24bd4bb140e3810192ad737a5a5ef76a.jpg" border="0" alt="24bd4bb140e3810192ad737a5a5ef76a.jpg" />
+    <div class="logo">Rafi'Uddin</div>
+    <h2>Student | Front-End Developer | Character Designer | Game Developer</h2>
+    <p><strong>Cook up something cool that everyone would wanna try.</strong></p>
+    <a href="#projek" class="btn">Lihat Projek Saya</a>
+  </section>
+
+  <!-- Tentang Saya -->
+  <section class="about" id="tentang">
+    <h2>Tentang Saya</h2>
+    <p>Saya adalah pelajar dari SMKN 1 Ciomas, Bogor yang tertarik pada jurusan PPLG karena ingin mendalami dunia Game Design & Development. Saya ingin memahami bagaimana sebuah game dibuat, mulai dari perancangan ide, desain karakter, hingga pengembangannya, serta mengasah kemampuan kreatif dan teknis agar dapat berkontribusi di industri game di masa depan.</p>
+    <div class="skills">
+      <span class="skill">Blender</span>
+      <span class="skill">3ds Max</span>
+      <span class="skill">Photoshop</span>
+    </div>
+  </section>
+
+  <!-- Projek -->
+  <section class="projek" id="projek">
+    <h2>PROJECT</h2>
+    <p><strong>CHARACTER MODELING</strong></p>
+    <div class="projek-images">
+      <img src="https://www.upload.ee/image/18532175/samp_13_03_2025_23_06_23.png" alt="samp_13_03_2025_23_06_23.png" />
+      <img src="https://www.upload.ee/image/18532176/samp_15_04_2025_09_38_53.png" alt="samp_15_04_2025_09_38_53.png" />
+      <img src="https://www.upload.ee/image/18532243/samp_04_03_2025_13_10_40.png" border="0" alt="samp_04_03_2025_13_10_40.png" />
+    </div>
+    <div style="height:2.5rem"></div>
+    <p><strong>ENVIRONMENT</strong></p>
+    <div class="projek-images">
+      <img src="https://www.upload.ee/image/18532199/Environment.png" alt="Environment.png" />
+      <img src="https://www.upload.ee/image/18532237/samp_13_10_2024_12_53_19.png" border="0" alt="samp_13_10_2024_12_53_19.png" />
+      <img src="https://www.upload.ee/image/18532241/samp_10_03_2025_22_49_24.png" border="0" alt="samp_10_03_2025_22_49_24.png" />
+    </div>
+      <div style="height:2.5rem"></div>
+      <div class="projek-images"></div>
+      <p><strong>GAME DEVELOPER</strong></p>
+      <p>Ini adalah salah satu project game yang saya dan teman saya bikin yaitu Mount Welirang, di roblox. Saya dengan 2 teman saya membutuhkan waktu kurang lebih seminggu dan saya menjadi designer dan 2 teman saya mengurus bagian Database, Frontend, dan Backend. Sekarang <strong>MOUNT WELIRANG</strong> sedang dalam OBT /OPEN BETA TEST/ yang dimana masih dalam masa percobaan dan memerlukan perbaikan pada suatu fitur yang tidak berjalan.</p>
+      <div class="projek-images">
+        <img src="https://www.upload.ee/image/18532250/Screenshot__701_.png" alt="Screenshot__701_.png" />
+        <img src="https://www.upload.ee/image/18532335/Screenshot__707_.png" border="0" alt="Screenshot__707_.png" />
+        <img src="https://www.upload.ee/image/18532255/Screenshot__700_.png" alt="Screenshot__700_.png" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section class="contact" id="kontak">
+    <h2>Contact</h2>
+    <p>My ROBLOX account : <a href="mailto:westpeople50@gmail.com"><strong>https://www.roblox.com/users/3924358639/profile</strong></a></p>
+    <p>My Discord: <a href="mailto:westpeople50@gmail.com"><strong>fauxductivity.</strong></a></p>
+    <p>Link Our Community: <a href="mailto:westpeople50@gmail.com"><strong>https://discord.gg/YpY7BKWWVD</strong></a></p>
+    <div class="socials">
+      <a href="https://instagram.com/jaymanz" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 middweaksta allright reserved.
+  </footer>
+
+</body>
+</html>#   P O R T O F O L I O - - - R a f i - U d d i n . g i t h u b . i o  
+ 
